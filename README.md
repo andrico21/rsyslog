@@ -1,11 +1,10 @@
-# Rsyslog docker container images
-
-[![Build Status](https://github.com/wodby/rsyslog/workflows/Build%20docker%20image/badge.svg)](https://github.com/wodby/rsyslog/actions)
-[![Docker Pulls](https://img.shields.io/docker/pulls/wodby/rsyslog.svg)](https://hub.docker.com/r/wodby/rsyslog)
-[![Docker Stars](https://img.shields.io/docker/stars/wodby/rsyslog.svg)](https://hub.docker.com/r/wodby/rsyslog)
+## Running securely
+```bash
+podman run --name rsyslog --replace --rm -it -p 514:514/udp --security-opt no-new-privileges --cap-drop all --cap-add NET_BIND_SERVICE rsyslog-experimental:latest
+```
 
 ## Supported tags and respective `Dockerfile` links:
 
-- [`latest` (*Dockerfile*)](https://github.com/wodby/rsyslog/tree/master/Dockerfile)
+- [`latest` (*Dockerfile*)](https://github.com/andrico21/rsyslog/Dockerfile)
 
 All images built for `linux/amd64` and `linux/arm64`
